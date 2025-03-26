@@ -7,9 +7,17 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1 style="background-color: #f9e616;">QRIFY</h1>
+  <header style="background-color: #f9e616; padding: 15px; position: relative; text-align: center;">
+    <h1 style="margin: 0;">QRIFY</h1>
+
+    <!-- Complaints Button -->
+    <button onclick="openComplaintsPage()" 
+      style="position: absolute; top: 50%; right: 20px; transform: translateY(-50%); 
+             background-color: red; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer;">
+      Need Help
+    </button>
   </header>
+
   <section id="restaurants">
     <h2>Scan Fast, Live Smart</h2>
     <div class="restaurant-list" id="restaurant-list">
@@ -18,5 +26,10 @@
   </section>
 
   <script src="script.js"></script>
+  <script>
+    function openComplaintsPage() {
+      window.location.href = "https://qrifycomplains.netlify.app/"; // Redirect to the complaints page
+    }
+  </script>
 </body>
 </html>
